@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import budapestImg from '../assets/img/budapest.jfif';
 import romeImg from '../assets/img/Rome.jfif'
-import madridImg from '../assets/img/madrid.jfif';
+import madridImg from '../assets/img/Madrid.jfif';
 import helsinkiImg from '../assets/img/helsinki.jfif';
 import ottawaImg from '../assets/img/ottawa.jfif';
 import amsterdamImg from '../assets/img/amsterdam.jfif';
