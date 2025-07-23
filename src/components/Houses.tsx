@@ -3,8 +3,8 @@ import budapestImg from '../assets/img/budapest.jfif';
 import romeImg from '../assets/img/Rome.jfif'
 import madridImg from '../assets/img/Madrid.jfif';
 import helsinkiImg from '../assets/img/Helsinki.jfif';
-import ottawaImg from '../assets/img/ottawa.jfif';
-import amsterdamImg from '../assets/img/amsterdam.jfif';
+import ottawaImg from '../assets/img/Ottawa.jfif';
+import amsterdamImg from '../assets/img/Amsterdam.jfif';
 import CallbackModal from './CallbackModal';
 
 
