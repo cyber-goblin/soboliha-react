@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import budapestImg from '../assets/img/budapest.jfif';
 import romeImg from '../assets/img/Rome.jfif'
 import madridImg from '../assets/img/Madrid.jfif';
-import helsinkiImg from '../assets/img/helsinki.jfif';
+import helsinkiImg from '../assets/img/Helsinki.jfif';
 import ottawaImg from '../assets/img/ottawa.jfif';
 import amsterdamImg from '../assets/img/amsterdam.jfif';
 import CallbackModal from './CallbackModal';
