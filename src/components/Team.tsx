@@ -2,7 +2,7 @@ import React from 'react';
 import borisImg from '../assets/img/Boris_Sergeevich.jpg';
 import markImg from '../assets/img/Mark_Mihalich.jpg'
 import megapolisImg from '../assets/img/megapolis_logo.png';
-import souzBetonImg from '../assets/img/souz_Beton.png';
+import souzBetonImg from '../assets/img/souz_beton.png';
 
 export const Team: React.FC = () => {
     return (
