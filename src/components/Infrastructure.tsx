@@ -4,7 +4,7 @@ import goreMoreImg from '../assets/img/gore_more.png';
 import izumrudnoeImg from '../assets/img/izumrudnoe.jfif';
 import cheeseFactoryImg from '../assets/img/cheese_factory_Kurtsevo.png';
 import holySpringNikolaKlyuch from '../assets/img/holy_spring_Nikola_Klyuch.png';
-import horseClubKonemaniaImg from '../assets/img/horse_Club_Konemania.png';
+import horseClubKonemaniaImg from '../assets/img/Horse_club_Konemania.png';
 import grocceryStore from '../assets/img/grocery_store.png'
 
 export const Infrastructure: React.FC = () => {
