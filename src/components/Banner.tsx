@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import CallbackModal from './CallbackModal';
 
@@ -8,14 +6,26 @@ export const Banner: React.FC = () => {
 
     const handleFormSubmit = (data: { name: string; phone: string; comment?: string }) => {
         console.log('Форма отправлена из баннера:', data);
-        // Тут позже будет отправка в Bitrix24
     };
 
     return (
         <section className="banner">
+            {/* 🎥 Видео-фон */}
+            <video
+                className="background-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+            >
+                <source src="/src/video/banner.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
             <div className="hero-content">
                 <h1>Коттеджный посёлок премиум-класса SOBOLIHA Residence</h1>
             </div>
+
             <div className="info-banner">
                 <div className="info-grid">
                     <div className="info-item">
@@ -31,7 +41,6 @@ export const Banner: React.FC = () => {
 
                 <div className="divider-horizontal" />
 
-                {/* 🔘 Кнопка с обработчиком */}
                 <button className="info-call-btn" onClick={() => setModalOpen(true)}>
                     ЗАКАЗАТЬ ЗВОНОК
                 </button>
@@ -39,7 +48,6 @@ export const Banner: React.FC = () => {
                 <div className="info-value">Старт закрытых продаж</div>
             </div>
 
-            {/* 🧩 Модальное окно */}
             <CallbackModal
                 isOpen={isModalOpen}
                 onClose={() => setModalOpen(false)}

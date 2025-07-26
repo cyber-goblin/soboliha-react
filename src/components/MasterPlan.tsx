@@ -1,5 +1,5 @@
 import React from 'react';
-import planImage from '../assets/img/genplan.jpg';
+import planImage from '../assets/img/master-plan-new.jpg';
 import barrierIcon from '../assets/img/barrier_icon.png';
 import tennisIcon from '../assets/img/paddle_tennis_icon.png'
 import sliderIcon from '../assets/img/slider_icon.png';

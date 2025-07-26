@@ -23,13 +23,13 @@ export const Header: React.FC = () => {
                 </div>
                 <nav className={menuOpen ? 'active' : ''}>
                     <ul className="nav-list">
-                        <li><a href="#about">О посёлке</a></li>
-                        <li><a href="#master-plan">Генплан</a></li>
-                        <li><a href="#houses">Дома</a></li>
-                        <li><a href="#infrastructure">Инфраструктура</a></li>
-                        <li><a href="#contacts">Контакты</a></li>
-
+                        <li><a href="#about" onClick={() => setMenuOpen(false)}>О посёлке</a></li>
+                        <li><a href="#master-plan" onClick={() => setMenuOpen(false)}>Генплан</a></li>
+                        <li><a href="#houses" onClick={() => setMenuOpen(false)}>Дома</a></li>
+                        <li><a href="#infrastructure" onClick={() => setMenuOpen(false)}>Инфраструктура</a></li>
+                        <li><a href="#contacts" onClick={() => setMenuOpen(false)}>Контакты</a></li>
                     </ul>
+
                 </nav>
                 <div className="phone">
                     <a href="tel:+78310000000">8-831-000-00-00</a>
