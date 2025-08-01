@@ -21,9 +21,10 @@ export const Banner: React.FC = () => {
                 <source src="/video/banner.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-
+            <div className="banner-content">
             <div className="hero-content">
-                <h1>Коттеджный посёлок премиум-класса SOBOLIHA Residence</h1>
+                <h1>SOBOLIHA RESIDENCE</h1>
+                <h2>Клубный коттеджный поселок в вековом лесу на Горьковском море</h2>
             </div>
 
             <div className="info-banner">
@@ -40,14 +41,31 @@ export const Banner: React.FC = () => {
                 </div>
 
                 <div className="divider-horizontal" />
+                <div className="utilities-text">все коммуникации<br /></div>
+                <div className="info-utilities">
 
+                    <div className="utilities-icons">
+                        <div className="utility-icon">
+                            <img src="/src/assets/img/water_icon.svg" alt="вода" />
+                            <span>вода</span>
+                        </div>
+                        <div className="utility-icon">
+                            <img src="/src/assets/img/lamp_icon.svg" alt="свет" />
+                            <span>свет</span>
+                        </div>
+                        <div className="utility-icon">
+                            <img src="/src/assets/img/fire_icon.svg" alt="газ" />
+                            <span>газ</span>
+                        </div>
+                    </div>
+                </div>
                 <button className="info-call-btn" onClick={() => setModalOpen(true)}>
                     ЗАКАЗАТЬ ЗВОНОК
                 </button>
 
-                <div className="info-value">Старт закрытых продаж</div>
-            </div>
 
+            </div>
+            </div>
             <CallbackModal
                 isOpen={isModalOpen}
                 onClose={() => setModalOpen(false)}

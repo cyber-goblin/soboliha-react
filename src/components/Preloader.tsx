@@ -5,7 +5,7 @@ export const Preloader: React.FC = () => {
     const [hidden, setHidden] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => setHidden(true), 800);
+        const timer = setTimeout(() => setHidden(true), 1800);
         return () => clearTimeout(timer);
     }, []);
 

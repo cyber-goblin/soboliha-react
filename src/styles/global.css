@@ -65,20 +65,58 @@ body {
     z-index: 9999;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
+
+.info-utilities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.utilities-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.utilities-icons {
+    display: flex;
+    gap: 2rem;
+    flex: 2;
+    justify-content: space-around;
+}
+
+.utility-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 1px solid white;       /* ← рамка */
+    border-radius: 1rem;           /* ← скругление */
+    padding: 1rem   ;        /* ← внутренний отступ */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.utility-icon img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.5rem;
+}
+
+
 .info-banner {
-    position: absolute;
-    top: 50%;
-    right: 12%;
-    transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
     border-radius: 1.5rem;
     padding: 2.5rem;
-    width: 440px;
-    z-index: 10;
     color: white;
-    text-align: center;
+    width: 440px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .info-grid {
@@ -263,8 +301,20 @@ body {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+.banner-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 5vw;
+}
 
 .banner::before {
     content: "";
@@ -275,28 +325,34 @@ body {
 }
 
 .hero-content {
-    position: absolute;
-    top: 36%;
-    left: 20%;
-    right: 5%;
-    z-index: 1;
     color: white;
-    text-align: left;
     max-width: 600px;
+    text-align: left;
 }
 
 .hero-content h1 {
     font-family: "Adobe Devanagari", sans-serif;
-    font-size: 4.8rem;
+    font-size: 6rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h2{
+    font-family: "Adobe Devanagari", sans-serif;
+    text-align: left;
+    font-size: 3rem;
     line-height: 1.2;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .about {
-    background: url("../assets/img/background_image_blue.png") no-repeat center/cover;
+    background: url("/public/img/background_image_blue.png") no-repeat center/cover;
+
     color: white;
     padding: 6rem 0;
+
 }
 
 .about-container {
@@ -339,20 +395,20 @@ body {
 }
 
 
-.about-right {
-    flex: 1;
-    font-size: 2.2rem;
-    line-height: 1.6;
-    text-align: justify;
-    margin-top: -2rem;
-}
+/*.about-right {*/
+/*    flex: 1;*/
+/*    font-size: 2.2rem;*/
+/*    line-height: 1.6;*/
+/*    text-align: justify;*/
+/*    margin-top: -2rem;*/
+/*}*/
 
-.about-right h2 {
+/*.about-right h2 {*/
 
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
+/*    font-size: 4rem;*/
+/*    margin-bottom: 2rem;*/
+/*    text-align: center;*/
+/*}*/
 
 .image-gallery {
     display: flex;
@@ -433,7 +489,7 @@ body {
 }
 
 .plan-right img {
-    max-width: 80%;
+    max-width: 100%;
 
     /*height:800px;*/
     border-radius: 1.5rem;
@@ -530,6 +586,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
 .infrastructure-title {
     font-size: 3.6rem;
     font-weight: 700;
@@ -1039,27 +1096,186 @@ a[href^="tel"] {
     cursor: pointer;
     z-index: 1100;
 }
-@media (max-width: 1499px) {
-    .banner {
-        padding-top: 14vh; /* Или точно в пикселях, например 100px */
-    }
 
-    .info-banner {
-        position: static;
-        transform: none;
-        margin: 4rem auto 0 auto;
-        width: 90%;
-        max-width: 400px;
-    }
+.top-strip {
+    background-color: #d7c195; /* бежевый */
+    color: #1f1f1f;
+    font-size: 1.6rem;
+    padding: 0.8rem 2rem;
+    text-align: center;
+    z-index: 1100;
+    position: relative;
+}
+
+.top-strip__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.top-strip__btn {
+    background-color: #856404;
+    color: white;
+    padding: 0.6rem 1.6rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1.4rem;
+}
+
+.top-strip__btn:hover {
+    background-color: #6f5200;
+}
+
+.messenger-icons {
+    margin-top: 4px;
+    display: flex;
+    gap: 10px;
+}
+
+.messenger-icons img {
+    width: 20px;
+    height: 20px;
+    transition: opacity 0.3s;
+}
+
+.messenger-icons img:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 
+.mobile-icons{
+    display: none;
+}
+.right-block {
+    display: none;
+}
+
+.about-grid {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.feature-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    border-radius: 12px;
+    background-color: #000;
+}
+.feature-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.feature-card:hover img {
+    transform: scale(1.1);
+}
+.feature-title {
+    position: absolute;
+    bottom: 4.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    z-index: 2;
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.feature-card:hover .overlay {
+    opacity: 1;
+}
+.feature-card .overlay h3 {
+    font-size: 1.3rem;
+    margin: 0 0 1rem;
+    opacity: 1;         /* Всегда видим */
+    max-height: none;   /* Не ограничен */
+    transition: none;
+}
+.feature-card .overlay p {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    font-size: 0.95rem;
+    overflow: hidden;
+}
+
+.feature-card:hover .overlay p {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 0.5rem;
+}
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1.5rem;
+    opacity: 0;
+    color: #fff;
+    z-index: 1;
+}
+
+.overlay h3 {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+    opacity: 1;
+    z-index: 2;
+    transition: none;
+}
+.overlay p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 0.95rem;
+    margin: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+.feature-card:hover .overlay p {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 0.5rem;
+}
+@media (max-width: 883px) {
+    .top-strip__content {
+        justify-content: center;
+    }
+    .top-strip__content span{
+        display: none;
+    }
+}
 @media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на мобильных */
+    }
     .hero-content {
-        top: 25%;
-        left: 2rem;
-        right: 2rem;
-        text-align: center;
+        /*top: 30%;*/
+        /*left: 2rem;*/
+        /*right: 2rem;*/
+        /*text-align: center;*/
+        text-align: left;
+        max-width: 600px
     }
 
     .hero-content h1 {
@@ -1067,6 +1283,12 @@ a[href^="tel"] {
     }
     .banner {
         height: 65vh;
+    }
+    .banner-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
     }
 
     .hero-content {
@@ -1263,13 +1485,14 @@ a[href^="tel"] {
     .contacts-map{
         display: none;
     }
+
     .logo{
         display: flex;
         align-items: center;
         gap: 3rem;
     }
     #contacts {
-        scroll-margin-top: 38vh; /* больше отступ, если хедер больше */
+        scroll-margin-top: 38vh;
         text-align: center;
     }
 }
@@ -1303,17 +1526,48 @@ a[href^="tel"] {
     .phone {
         display: none;
     }
+    .messenger-icons {
+
+        display: flex;
+        gap: 10px;
+        margin: 0;
+    }
+    /* По умолчанию — desktop */
+    .right-block {
+        display: none;
+    }
+
+    /* Только для мобильной версии */
+    @media (max-width: 1127px) {
+        .right-block {
+            display: flex;
+            align-items: center;
+            gap: 18px; /* Можешь уменьшить до 4px при необходимости */
+            margin-left: auto; /* чтобы прижать вправо */
+        }
+
+        .right-block .messenger-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+    }
+
 }
 
 @media (max-width: 1499px) {
     .banner {
         display: flex;
+
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding-top: 18vh;
+        padding-top: 20vh;
         padding-bottom: 4rem;
-        min-height: 100vh;
+        /*max-height: 100vh;*/
         height: auto;
     }
 
@@ -1321,21 +1575,22 @@ a[href^="tel"] {
         position: static;
         max-width: 90%;
         text-align: center;
-        margin-bottom: 3rem;
         z-index: 1;
     }
 
     .hero-content h1 {
-        font-size: 3.2rem;
-        line-height: 1.3;
+        font-size: 5rem;
+        /*line-height: 1.3;*/
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     }
 
     .info-banner {
+
         position: static;
         transform: none;
-        width: 90%;
+        width: 100%;
         max-width: 420px;
         margin: 0 auto;
     }
+
 }

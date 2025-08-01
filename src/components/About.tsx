@@ -1,67 +1,76 @@
-import React, { useState } from 'react';
-import mainImage from '../assets/img/about_village.jfif';
-import playgroundImg from '../assets/img/playground.jfif';
-import paddleTennisImg from '../assets/img/paddle_tennis.jfif';
-import sportsZoneImg from '../assets/img/sports_zone.jfif';
-import workoutImg from '../assets/img/workout.jfif';
+import React from 'react';
+import feature1 from '../assets/img/feature1.jpg';
+import feature2 from '../assets/img/feature2.jpg';
+import feature3 from '../assets/img/feature3.jpg';
+import feature4 from '../assets/img/feature4.jpg';
+import feature5 from '../assets/img/feature5.jpg';
+import feature6 from '../assets/img/feature6.jpg';
+import feature7 from '../assets/img/feature7.jpg';
+import feature8 from '../assets/img/feature8.jpg';
+import feature9 from '../assets/img/feature9.jpg';
+
+const features = [
+    {
+        img: feature1,
+        title: 'Коммуникации',
+        text: 'Свет, газ, вода - всё есть на участке',
+    },
+    {
+        img: feature2,
+        title: 'Близость к Нижнему Новгороду',
+        text: 'Доехать до центра Нижнего Новгорода можно за 40 минут по скоростной трассе.',
+    },
+    {
+        img: feature3,
+        title: 'Близость к Нижнему Новгороду',
+        text: 'Доехать до центра Нижнего Новгорода можно за 40 минут по скоростной трассе.',
+    },
+    {
+        img: feature4,
+        title: 'Детские площадки',
+        text: 'Тут будет подходящий текст.',
+    },
+    {
+        img: feature5,
+        title: 'Зоны отдыха',
+        text: 'Тихие уголки природы для отдыха всей семьей.',
+    },
+    {
+        img: feature6,
+        title: 'Охраняемая территория',
+        text: 'Круглосуточная охрана и видеонаблюдение.',
+    },
+    {
+        img: feature7,
+        title: 'Падел теннис',
+        text: 'Современные площадки для активного отдыха.',
+    },
+    {
+        img: feature8,
+        title: 'Экологически чистый район',
+        text: 'Лес, озеро и тишина вокруг — для перезагрузки и вдохновения.',
+    },
+    {
+        img: feature9,
+        title: 'Досуг на воде',
+        text: 'Тут будет подходящий текст',
+    },
+];
 
 const About: React.FC = () => {
-    const [activeImage, setActiveImage] = useState({
-        src: mainImage,
-        alt: 'Главное изображение',
-    });
-
-    const [galleryImages, setGalleryImages] = useState([
-        { src: playgroundImg, alt: 'Детская площадка' },
-        { src: paddleTennisImg, alt: 'Падел-теннис' },
-        { src: sportsZoneImg, alt: 'Спортивная зона' },
-        { src: workoutImg, alt: 'Воркаут-площадка' },
-    ]);
-
-    const handleClick = (clickedImg: { src: string; alt: string }, index: number) => {
-        // обмен: clicked становится главным, главный возвращается в галерею
-        const newGallery = [...galleryImages];
-        newGallery[index] = activeImage;
-        setGalleryImages(newGallery);
-        setActiveImage(clickedImg);
-    };
-
     return (
-        <section id="about" className="about">
-            <div className="about-container">
-                <div className="about-content">
-                    <div className="about-left">
-                        <div className="main-image">
-                            <img src={activeImage.src} alt={activeImage.alt} />
+        <section id="about" className="about-grid">
+            <div className="feature-grid">
+                {features.map((item, index) => (
+                    <div className="feature-card" key={index}>
+                        <img src={item.img} alt={item.title} />
+                        <h3 className="feature-title">{item.title}</h3>
+                        <div className="overlay">
+                            <p>{item.text}</p>
                         </div>
-                    </div>
 
-
-                    <div className="about-right">
-                        <h2>О посёлке</h2>
-                        <p>
-                            <strong>Soboliha Residence</strong> — коттеджный посёлок премиального класса,
-                            расположенный в живописном сосновом лесу на Горьковском море.
-                        </p>
-                        <p>
-                            Поселок отличается высоким уровнем безопасности, развитой инфраструктурой и
-                            эксклюзивными удобствами, такими как падел-теннис, спортивные и детские площадки,
-                            а также зоны для отдыха и пикников. Это идеальное место для тех, кто ценит спокойствие
-                            и роскошь загородной жизни.
-                        </p>
                     </div>
-                </div>
-                <div className="image-gallery">
-                    {galleryImages.map((img, index) => (
-                        <img
-                            key={index}
-                            src={img.src}
-                            alt={img.alt}
-                            className="gallery-thumb"
-                            onClick={() => handleClick(img, index)}
-                        />
-                    ))}
-                </div>
+                ))}
             </div>
         </section>
     );
