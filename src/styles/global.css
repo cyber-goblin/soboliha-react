@@ -1270,14 +1270,13 @@ a[href^="tel"] {
         grid-template-columns: repeat(2, 1fr); /* 2 колонки на мобильных */
     }
     .hero-content {
-        /*top: 30%;*/
-        /*left: 2rem;*/
-        /*right: 2rem;*/
-        /*text-align: center;*/
+
         text-align: left;
         max-width: 600px
     }
-
+    .header-icons {
+        display: none;
+    }
     .hero-content h1 {
         font-size: 2.8rem;
     }
