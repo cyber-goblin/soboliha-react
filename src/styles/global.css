@@ -1190,7 +1190,7 @@ a[href^="tel"] {
 }
 .feature-title {
     position: absolute;
-    bottom: 4.5rem;
+    bottom: 16rem;
     left: 1.5rem;
     right: 1.5rem;
     z-index: 2;
@@ -1567,7 +1567,7 @@ a[href^="tel"] {
         justify-content: flex-start;
         padding-top: 20vh;
         padding-bottom: 4rem;
-        /*max-height: 100vh;*/
+        min-height: 90vh;
         height: auto;
     }
 
@@ -1590,7 +1590,7 @@ a[href^="tel"] {
         transform: none;
         width: 100%;
         max-width: 420px;
-        margin: 0 auto;
+        margin: 2rem auto 0;
     }
 
 }
