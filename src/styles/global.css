@@ -1274,9 +1274,7 @@ a[href^="tel"] {
         text-align: left;
         max-width: 600px
     }
-    .header-icons {
-        display: none;
-    }
+
     .hero-content h1 {
         font-size: 2.8rem;
     }
@@ -1493,6 +1491,9 @@ a[href^="tel"] {
     #contacts {
         scroll-margin-top: 38vh;
         text-align: center;
+    }
+    .messenger-icons {
+        display: none !important;
     }
 }
 @media (max-width: 1127px) {
