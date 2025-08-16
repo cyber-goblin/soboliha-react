@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../styles/CallbackModal.css"; // если папка называется styles и лежит рядом с src
+import "../styles/CallbackModal.css";
 import { sendToBitrix } from '../utils/sendToBitrix';
 
 interface CallbackModalProps {
